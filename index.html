@@ -148,37 +148,6 @@
             font-size: 1.2rem;
         }
         
-        .category-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .tab-btn {
-            background-color: #e8f5e8;
-            border: none;
-            padding: 12px 24px;
-            margin: 5px 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #2d5a2d;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .tab-btn:hover {
-            background-color: #d4ecd4;
-            transform: translateY(-3px);
-        }
-        
-        .tab-btn.active {
-            background-color: #ffd166;
-            color: #8b4513;
-        }
-        
         .category-description {
             text-align: center;
             color: #f0f7f0;
@@ -586,15 +555,6 @@
             margin-right: 10px;
         }
         
-        /* Tab Content Styles */
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
@@ -641,11 +601,6 @@
         @media (max-width: 480px) {
             h1 {
                 font-size: 2rem;
-            }
-            
-            .tab-btn {
-                padding: 10px 15px;
-                font-size: 1rem;
             }
             
             .additional-images {
@@ -721,16 +676,6 @@
                 <i class="fas fa-truck"></i> Pengiraman Tersedia
             </div>
             
-            <div class="durian-location">
-                <i class="fas fa-map-marker-alt"></i> DURIAN BALI SINGARAJA ASLI
-            </div>
-            
-            <div class="category-tabs">
-                <button class="tab-btn active" data-target="all">Semua Durian</button>
-                <button class="tab-btn" data-target="premium">Durian Premium</button>
-                <button class="tab-btn" data-target="biasa">Durian Biasa</button>
-            </div>
-            
             <div class="category-description">
                 <p>Omah Durian RAV menyediakan <strong>durian Bali Singaraja</strong> asli dengan dua pilihan kualitas: <strong>Durian Premium</strong> dengan daging tebal, rasa manis legit, dan biji kecil, serta <strong>Durian Biasa</strong> dengan harga terjangkau namun tetap lezat. Semua durian dipetik langsung dari kebun di Singaraja, Bali.</p>
             </div>
@@ -773,135 +718,56 @@
                 </div>
             </div>
             
-            <!-- Tab Content untuk Semua Durian -->
-            <div id="all" class="tab-content active">
-                <h2 class="section-title">Semua Pilihan Durian Kami</h2>
-                
-                <!-- Section Durian Premium -->
-                <div class="premium-section" itemscope itemtype="https://schema.org/Product">
-                    <h3 class="section-title" style="font-size: 1.8rem; margin: 30px 0 20px; color: #ffd700;">
+            <!-- Section Durian Premium -->
+            <h2 class="section-title">Durian Premium</h2>
+            <div class="poster-grid">
+                <div class="durian-card premium" itemscope itemtype="https://schema.org/Product">
+                    <div class="card-header">
                         <i class="fas fa-crown"></i> DURIAN PREMIUM
-                    </h3>
-                    <div class="poster-grid">
-                        <!-- Durian Premium 1 - HANYA SATU KARTU -->
-                        <div class="durian-card premium">
-                            <div class="card-header">
-                                <i class="fas fa-crown"></i> DURIAN PREMIUM
-                            </div>
-                            <img src="https://files.catbox.moe/3eyolo.jpeg" alt="Durian Bali Singaraja Premium - Daging Tebal Kuning Keemasan" class="card-image" itemprop="image">
-                            <div class="card-body">
-                                <h3 class="card-title" itemprop="name">Durian Bali Singaraja Premium</h3>
-                                <ul class="card-features">
-                                    <li><i class="fas fa-check"></i> Daging tebal kuning keemasan</li>
-                                    <li><i class="fas fa-check"></i> Rasa manis legit khas Bali</li>
-                                    <li><i class="fas fa-check"></i> Tekstur lembut seperti mentega</li>
-                                    <li><i class="fas fa-check"></i> Biji kecil dan tipis</li>
-                                    <li><i class="fas fa-check"></i> Aroma harum khas durian Singaraja</li>
-                                    <li><i class="fas fa-check"></i> Dipetik langsung dari kebun Singaraja</li>
-                                </ul>
-                                <!-- UBAH HARGA DI SINI -->
-                                <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                    <span itemprop="priceCurrency" content="IDR">Rp</span>
-                                    <span itemprop="price" content="100000">100.000</span>/krnjng
-                                </div>
-                                <p class="click-hint">Klik gambar untuk memperbesar</p>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                
-                <!-- Section Durian Biasa -->
-                <div class="biasa-section" itemscope itemtype="https://schema.org/Product">
-                    <h3 class="section-title" style="font-size: 1.8rem; margin: 50px 0 20px; color: #a1885f;">
-                        <i class="fas fa-leaf"></i> DURIAN BIASA
-                    </h3>
-                    <div class="poster-grid">
-                        <!-- Durian Biasa 1 - HANYA SATU KARTU -->
-                        <div class="durian-card biasa">
-                            <div class="card-header">
-                                <i class="fas fa-leaf"></i> DURIAN BIASA
-                            </div>
-                            <img src="https://files.catbox.moe/u1x9ph.jpg" alt="Durian Bali Singaraja Biasa - Harga Terjangkau" class="card-image" itemprop="image">
-                            <div class="card-body">
-                                <h3 class="card-title" itemprop="name">Durian Bali Singaraja Biasa</h3>
-                                <ul class="card-features">
-                                    <li><i class="fas fa-check"></i> Daging tipis hingga sedang</li>
-                                    <li><i class="fas fa-check"></i> Rasa manis alami khas Bali</li>
-                                    <li><i class="fas fa-check"></i> Harga terjangkau</li>
-                                    <li><i class="fas fa-check"></i> Ketersediaan melimpah</li>
-                                    <li><i class="fas fa-check"></i> Cocok untuk konsumsi harian</li>
-                                    <li><i class="fas fa-check"></i> Dipetik langsung dari petani lokal</li>
-                                </ul>
-                                <!-- UBAH HARGA DI SINI -->
-                                <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                    <span itemprop="priceCurrency" content="IDR">Rp</span>
-                                    <span itemprop="price" content="80000">80.000</span>/krnjng
-                                </div>
-                                <p class="click-hint">Klik gambar untuk memperbesar</p>
-                            </div>
+                    <img src="https://files.catbox.moe/3eyolo.jpeg" alt="Durian Bali Singaraja Premium - Daging Tebal Kuning Keemasan" class="card-image" itemprop="image">
+                    <div class="card-body">
+                        <h3 class="card-title" itemprop="name">Durian Bali Singaraja Premium</h3>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Daging tebal kuning keemasan</li>
+                            <li><i class="fas fa-check"></i> Rasa manis legit khas Bali</li>
+                            <li><i class="fas fa-check"></i> Tekstur lembut seperti mentega</li>
+                            <li><i class="fas fa-check"></i> Biji kecil dan tipis</li>
+                            <li><i class="fas fa-check"></i> Aroma harum khas durian Singaraja</li>
+                            <li><i class="fas fa-check"></i> Dipetik langsung dari kebun Singaraja</li>
+                        </ul>
+                        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <span itemprop="priceCurrency" content="IDR">Rp</span>
+                            <span itemprop="price" content="100000">100.000</span>/krnjng
                         </div>
+                        <p class="click-hint">Klik gambar untuk memperbesar</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Tab Content untuk Durian Premium -->
-            <div id="premium" class="tab-content">
-                <h2 class="section-title">Durian Premium</h2>
-                <div class="category-description">
-                    <p><strong>Durian Premium Bali Singaraja</strong> dengan harga Rp 100.000/kg. Daging tebal kuning keemasan, rasa manis legit, biji kecil, dan aroma harum khas durian Singaraja. Kualitas terbaik yang dipetik langsung dari kebun pilihan di Singaraja, Bali.</p>
-                </div>
-                <div class="poster-grid">
-                    <!-- Durian Premium - KARTU YANG SAMA -->
-                    <div class="durian-card premium">
-                        <div class="card-header">
-                            <i class="fas fa-crown"></i> DURIAN PREMIUM
-                        </div>
-                        <img src="https://files.catbox.moe/3eyolo.jpeg" alt="Durian Bali Singaraja Premium - Kualitas Terbaik" class="card-image">
-                        <div class="card-body">
-                            <h3 class="card-title">Durian Bali Singaraja Premium</h3>
-                            <ul class="card-features">
-                                <li><i class="fas fa-check"></i> Daging tebal kuning keemasan</li>
-                                <li><i class="fas fa-check"></i> Rasa manis legit khas Bali</li>
-                                <li><i class="fas fa-check"></i> Tekstur lembut seperti mentega</li>
-                                <li><i class="fas fa-check"></i> Biji kecil dan tipis</li>
-                                <li><i class="fas fa-check"></i> Aroma harum khas durian Singaraja</li>
-                                <li><i class="fas fa-check"></i> Dipetik langsung dari kebun Singaraja</li>
-                            </ul>
-                            <!-- UBAH HARGA DI SINI JUGA -->
-                            <div class="price">Rp 100.000/kg</div>
-                            <p class="click-hint">Klik gambar untuk memperbesar</p>
-                        </div>
+            <!-- Section Durian Biasa -->
+            <h2 class="section-title">Durian Non Premium</h2>
+            <div class="poster-grid">
+                <div class="durian-card biasa" itemscope itemtype="https://schema.org/Product">
+                    <div class="card-header">
+                        <i class="fas fa-leaf"></i> DURIAN NON PREMIUM
                     </div>
-                </div>
-            </div>
-            
-            <!-- Tab Content untuk Durian Biasa -->
-            <div id="biasa" class="tab-content">
-                <h2 class="section-title">Durian Biasa</h2>
-                <div class="category-description">
-                    <p><strong>Durian Biasa Bali Singaraja</strong> dengan harga Rp 80.000/kg. Rasa manis alami khas Bali dengan harga terjangkau. Cocok untuk konsumsi harian dan acara keluarga. Meski harganya lebih ekonomis, kualitas dan rasa tetap terjamin.</p>
-                </div>
-                <div class="poster-grid">
-                    <!-- Durian Biasa - KARTU YANG SAMA -->
-                    <div class="durian-card biasa">
-                        <div class="card-header">
-                            <i class="fas fa-leaf"></i> DURIAN BIASA
+                    <img src="https://files.catbox.moe/u1x9ph.jpg" alt="Durian Bali Singaraja Biasa - Harga Terjangkau" class="card-image" itemprop="image">
+                    <div class="card-body">
+                        <h3 class="card-title" itemprop="name">Durian Bali Singaraja</h3>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Daging tipis hingga sedang</li>
+                            <li><i class="fas fa-check"></i> Rasa manis alami khas Bali</li>
+                            <li><i class="fas fa-check"></i> Harga terjangkau</li>
+                            <li><i class="fas fa-check"></i> Ketersediaan melimpah</li>
+                            <li><i class="fas fa-check"></i> Cocok untuk konsumsi harian</li>
+                            <li><i class="fas fa-check"></i> Dipetik langsung dari petani lokal</li>
+                        </ul>
+                        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <span itemprop="priceCurrency" content="IDR">Rp</span>
+                            <span itemprop="price" content="80000">80.000</span>/krnjng
                         </div>
-                        <img src="https://files.catbox.moe/u1x9ph.jpg" alt="Durian Bali Singaraja Biasa - Harga Ekonomis" class="card-image">
-                        <div class="card-body">
-                            <h3 class="card-title">Durian Bali Singaraja Biasa</h3>
-                            <ul class="card-features">
-                                <li><i class="fas fa-check"></i> Daging tipis hingga sedang</li>
-                                <li><i class="fas fa-check"></i> Rasa manis alami khas Bali</li>
-                                <li><i class="fas fa-check"></i> Harga terjangkau</li>
-                                <li><i class="fas fa-check"></i> Ketersediaan melimpah</li>
-                                <li><i class="fas fa-check"></i> Cocok untuk konsumsi harian</li>
-                                <li><i class="fas fa-check"></i> Dipetik langsung dari petani lokal</li>
-                            </ul>
-                            <!-- UBAH HARGA DI SINI JUGA -->
-                            <div class="price">Rp 80.000/kg</div>
-                            <p class="click-hint">Klik gambar untuk memperbesar</p>
-                        </div>
+                        <p class="click-hint">Klik gambar untuk memperbesar</p>
                     </div>
                 </div>
             </div>
@@ -966,9 +832,7 @@
     </div>
     
     <script>
-        // Elemen DOM untuk tab system
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
+        // Elemen DOM untuk modal
         const modal = document.getElementById('imageModal');
         const zoomedImage = document.getElementById('zoomedImage');
         const modalInfo = document.getElementById('modalInfo');
@@ -976,45 +840,6 @@
         const additionalImages = document.querySelectorAll('.additional-image');
         const locationImage = document.querySelector('.location-image');
         const durianImages = document.querySelectorAll('.card-image');
-
-        // Fungsi untuk menampilkan tab yang dipilih
-        function showTab(tabId) {
-            // Sembunyikan semua tab content
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-            
-            // Tampilkan tab content yang dipilih
-            const selectedTab = document.getElementById(tabId);
-            if (selectedTab) {
-                selectedTab.classList.add('active');
-            }
-        }
-
-        // Event listener untuk tab kategori
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Hapus kelas active dari semua tab
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // Tambah kelas active ke tab yang diklik
-                button.classList.add('active');
-                
-                // Tampilkan tab content yang sesuai
-                const tabId = button.getAttribute('data-target');
-                showTab(tabId);
-                
-                // Update deskripsi kategori
-                const description = document.querySelector('.category-description p');
-                if (tabId === 'all') {
-                    description.innerHTML = 'Omah Durian RAV menyediakan <strong>durian Bali Singaraja</strong> asli dengan dua pilihan kualitas: <strong>Durian Premium</strong> dengan daging tebal, rasa manis legit, dan biji kecil, serta <strong>Durian Biasa</strong> dengan harga terjangkau namun tetap lezat. Semua durian dipetik langsung dari kebun di Singaraja, Bali.';
-                } else if (tabId === 'premium') {
-                    description.innerHTML = '<strong>Durian Premium Bali Singaraja</strong> dengan harga Rp 100.000/kg. Daging tebal kuning keemasan, rasa manis legit, biji kecil, dan aroma harum khas durian Singaraja. Kualitas terbaik yang dipetik langsung dari kebun pilihan di Singaraja, Bali.';
-                } else if (tabId === 'biasa') {
-                    description.innerHTML = '<strong>Durian Biasa Bali Singaraja</strong> dengan harga Rp 80.000/kg. Rasa manis alami khas Bali dengan harga terjangkau. Cocok untuk konsumsi harian dan acara keluarga. Meski harganya lebih ekonomis, kualitas dan rasa tetap terjamin.';
-                }
-            });
-        });
 
         // Event listener untuk gambar tambahan (bisa di-klik untuk zoom)
         additionalImages.forEach(img => {
